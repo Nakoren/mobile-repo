@@ -1,3 +1,4 @@
 <resources>
+    <string name="empty"></string>
     <string name="app_name">MobileApp</string>
 </resources>

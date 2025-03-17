@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/darkBlue"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            :textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Choose target area"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="Pause"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/s1ShipLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Boat"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/s1ShipCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="4"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/s2ShipLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Destroyer"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/s2ShipCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/s3ShipLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Cruiser"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/s3ShipCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/s4ShipLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="BattleShip"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/s4ShipCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+            <TableRow
+                android:layout_width="104dp"
+                android:layout_height="78dp"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="_" />
+
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
