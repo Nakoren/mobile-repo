@@ -5,15 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameInitActivity">
+    tools:context=".game_init_activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="128dp"
         android:background="@color/darkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,42 +20,39 @@
 
         <TextView
             android:id="@+id/СonfigTitle"
-            android:layout_width="176dp"
-            android:layout_height="68dp"
-            android:layout_marginStart="53dp"
+            android:layout_width="279dp"
+            android:layout_height="100dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="53dp"
-            android:text="Battle configuration"
+            android:text="@string/Config_text"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/StartButton"
-            android:layout_width="164dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="59dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="16dp"
-            android:onClick="onStartGameButton"
-            android:text="Start battle"
+            android:layout_width="270dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="36dp"
+            android:onClick="onStartButton"
+            android:text="@string/StartBattle_text"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/BoatCountLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
             android:layout_marginTop="16dp"
-            android:text="Boat (1 cell)"
+            android:text="@string/Boat_nameExt"
             android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/СonfigTitle" />
 
@@ -67,10 +60,11 @@
             android:id="@+id/DestroyerCountLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
             android:layout_marginTop="8dp"
-            android:text="Destroyer (2 cells)"
+            android:text="@string/Destroyer_nameExt"
             android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/boatSeekBar" />
 
@@ -78,10 +72,11 @@
             android:id="@+id/cruiserCountLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
             android:layout_marginTop="8dp"
-            android:text="Cruiser (3 cells)"
+            android:text="@string/Cruiser_nameExt"
             android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/destroyerSeekBar" />
 
@@ -89,58 +84,59 @@
             android:id="@+id/battleshipCountLabel2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
             android:layout_marginTop="8dp"
-            android:text="Battleship (4 cells)"
+            android:text="@string/BattleShip_nameExt"
             android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cruiserSeekBar" />
 
         <SeekBar
             android:id="@+id/boatSeekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="271dp"
+            android:layout_width="350dp"
             android:layout_height="32dp"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
             android:max="6"
             android:progress="4"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/BoatCountLabel" />
 
         <SeekBar
             android:id="@+id/destroyerSeekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="271dp"
+            android:layout_width="350dp"
             android:layout_height="32dp"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
             android:max="4"
             android:progress="2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DestroyerCountLabel" />
 
         <SeekBar
             android:id="@+id/cruiserSeekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="271dp"
+            android:layout_width="350dp"
             android:layout_height="32dp"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
             android:max="3"
             android:progress="2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cruiserCountLabel" />
 
         <SeekBar
             android:id="@+id/battleshipSeekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="271dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="4dp"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
             android:layout_marginTop="8dp"
             android:max="2"
             android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/battleshipCountLabel2" />
 

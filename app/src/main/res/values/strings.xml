@@ -1,4 +1,22 @@
 <resources>
-    <string name="empty"></string>
     <string name="app_name">MobileApp</string>
+    <string name="Pause_text">Pause</string>
+    <string name="Config_text">Battle configuration</string>
+    <string name="StartBattle_text">Start battle</string>
+    <string name="Continue_text">Continue</string>
+    <string name="ToTitle_text">To title</string>
+    <string name="Place_name">Place</string>
+    <string name="Confirm_text">Confirm</string>
+    <string name="Rotate_text">Rotate</string>
+    <string name="Remove_text">Remove</string>
+    <string name="Boat_name">Boat</string>
+    <string name="Destroyer_name">Destroyer</string>
+    <string name="Cruiser_name">Cruiser</string>
+    <string name="BattleShip_name">BattleShip</string>
+    <string name="Boat_nameExt">Boat (1 cells)</string>
+    <string name="Destroyer_nameExt">Destroyer (2 cells)</string>
+    <string name="Cruiser_nameExt">Cruiser (3 cells)</string>
+    <string name="BattleShip_nameExt">BattleShip (4 cells)</string>
+    <string name="Attack_text">Attack</string>
+    <string name="TargetSelect_text">Select target area</string>
 </resources>

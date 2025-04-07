@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MobileApp"
         tools:targetApi="31">
         <activity
+            android:name=".gameplay_enemy"
+            android:exported="false" />
+        <activity
+            android:name=".pause"
+            android:exported="false" />
+        <activity
+            android:name=".gameplay_player"
+            android:exported="false" />
+        <activity
+            android:name=".Gameplay_place_activity"
+            android:exported="false" />
+        <activity
+            android:name=".game_init_activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

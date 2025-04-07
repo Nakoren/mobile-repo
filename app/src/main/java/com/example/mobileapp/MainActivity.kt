@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+import android.content.Intent
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goToGameConfig(view: View){
-
+        val int: Intent = Intent(this, game_init_activity().javaClass)
+        startActivity(int)
     }
 }

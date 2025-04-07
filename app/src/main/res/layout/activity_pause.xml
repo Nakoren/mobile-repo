@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkBlue">
+    android:background="@color/darkBlue"
+    tools:context=".pause">
 
     <Button
         android:id="@+id/button4"
@@ -13,8 +14,9 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="267dp"
         android:layout_marginEnd="64dp"
-        android:text="Continue"
+        android:text="@string/Continue_text"
         android:textSize="35sp"
+        android:onClick="onContinueButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +29,9 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="202dp"
-        android:text="To title"
+        android:text="@string/ToTitle_text"
         android:textSize="35sp"
+        android:onClick="onTitleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
